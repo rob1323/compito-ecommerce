@@ -2,31 +2,88 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>E-Commerce - Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaShop - Admin</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Vista Admin</h1>
+  <div class="page-bg"></div>
 
-  <h2>Aggiungi prodotto</h2>
-  <input id="name" placeholder="Nome prodotto">
-  <input id="price" type="number" placeholder="Prezzo">
-  <input id="stock" type="number" placeholder="Stock">
-  <button onclick="addProduct()">Aggiungi</button>
+  <header class="topbar">
+    <div>
+      <h1>NovaShop</h1>
+      <p class="subtitle">Dashboard Admin</p>
+    </div>
+    <div class="topbar-actions">
+      <a class="btn ghost" href="index.html">Area Utente</a>
+      <button id="adminLogoutBtn" class="btn danger hidden">Logout</button>
+    </div>
+  </header>
 
-  <h2>Modifica stock</h2>
-  <input id="productId" type="number" placeholder="ID prodotto">
-  <input id="newStock" type="number" placeholder="Nuovo stock">
-  <button onclick="updateStock()">Aggiorna stock</button>
+  <main class="container">
+    <section id="adminAuthSection" class="panel glass narrow">
+      <h2>Accesso Admin</h2>
+      <p class="muted">Solo gli utenti con ruolo admin possono entrare.</p>
+      <input id="adminEmail" type="email" placeholder="Email admin">
+      <input id="adminPassword" type="password" placeholder="Password">
+      <button class="btn primary" onclick="adminLogin()">Accedi come admin</button>
+      <p class="small-tip">Admin test: admin@shop.it / admin123</p>
+    </section>
 
-  <h2>Aggiungi crediti utente</h2>
-  <input id="userId" type="number" placeholder="ID utente">
-  <input id="bonusCredits" type="number" placeholder="Crediti bonus">
-  <button onclick="addCredits()">Assegna crediti</button>
+    <section id="adminSection" class="hidden">
+      <div class="hero glass">
+        <div>
+          <p class="badge admin">Accesso autorizzato</p>
+          <h2 id="adminWelcome">Dashboard</h2>
+          <p class="muted">Gestisci catalogo, stock e crediti utenti.</p>
+        </div>
+      </div>
 
-  <p id="adminMessage"></p>
+      <div class="grid-two">
+        <div class="panel glass">
+          <h3>Aggiungi prodotto</h3>
+          <input id="name" type="text" placeholder="Nome prodotto">
+          <input id="price" type="number" placeholder="Prezzo">
+          <input id="stock" type="number" placeholder="Stock iniziale">
+          <textarea id="description" placeholder="Descrizione prodotto"></textarea>
+          <button class="btn secondary" onclick="addProduct()">Aggiungi prodotto</button>
+        </div>
 
-  <a href="index.html">Vai alla vista Utente</a>
+        <div class="panel glass">
+          <h3>Modifica prodotto</h3>
+          <input id="productId" type="number" placeholder="ID prodotto">
+          <input id="editName" type="text" placeholder="Nuovo nome">
+          <input id="editPrice" type="number" placeholder="Nuovo prezzo">
+          <input id="newStock" type="number" placeholder="Nuovo stock">
+          <textarea id="editDescription" placeholder="Nuova descrizione"></textarea>
+          <button class="btn secondary" onclick="updateProduct()">Salva modifiche</button>
+        </div>
+      </div>
+
+      <div class="grid-two">
+        <div class="panel glass">
+          <h3>Assegna crediti bonus</h3>
+          <input id="userId" type="number" placeholder="ID utente">
+          <input id="bonusCredits" type="number" placeholder="Crediti bonus">
+          <button class="btn primary" onclick="addCredits()">Assegna crediti</button>
+        </div>
+
+        <div class="panel glass">
+          <h3>Utenti registrati</h3>
+          <button class="btn ghost" onclick="loadUsers()">Aggiorna utenti</button>
+          <div id="usersList" class="mini-list"></div>
+        </div>
+      </div>
+
+      <div class="panel glass">
+        <h3>Catalogo corrente</h3>
+        <button class="btn ghost" onclick="loadProducts()">Aggiorna catalogo</button>
+        <div id="productsList" class="mini-list"></div>
+      </div>
+    </section>
+
+    <p id="adminMessage" class="message"></p>
+  </main>
 
   <script src="admin.js"></script>
 </body>

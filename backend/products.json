@@ -1,20 +1,23 @@
 [
   {
     "id": 1,
-    "name": "Mouse",
-    "price": 30,
-    "stock": 1
+    "name": "Mouse RGB",
+    "price": 35,
+    "stock": 8,
+    "description": "Mouse gaming con illuminazione RGB e sensore preciso."
   },
   {
     "id": 2,
-    "name": "Tastiera",
-    "price": 50,
-    "stock": 3
+    "name": "Tastiera Meccanica",
+    "price": 79,
+    "stock": 5,
+    "description": "Tastiera meccanica compatta con switch tattili."
   },
   {
     "id": 3,
-    "name": "PC",
-    "price": 400,
-    "stock": 2
+    "name": "Cuffie Wireless",
+    "price": 95,
+    "stock": 4,
+    "description": "Cuffie over-ear con audio pulito e connessione wireless."
   }
 ]

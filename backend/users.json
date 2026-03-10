@@ -1,7 +1,18 @@
 [
   {
     "id": 1,
+    "name": "Admin",
+    "email": "admin@shop.it",
+    "password": "admin123",
+    "credits": 1000,
+    "role": "admin"
+  },
+  {
+    "id": 2,
     "name": "Mario",
-    "credits": 4
+    "email": "mario@mail.it",
+    "password": "mario123",
+    "credits": 120,
+    "role": "user"
   }
 ]

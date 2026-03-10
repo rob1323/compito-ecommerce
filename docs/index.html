@@ -2,20 +2,69 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>E-Commerce - Utente</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaShop - Area Utente</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Vista Utente</h1>
+  <div class="page-bg"></div>
 
-  <p>Crediti utente: <span id="credits">...</span></p>
+  <header class="topbar">
+    <div>
+      <h1>NovaShop</h1>
+      <p class="subtitle">Area Utente</p>
+    </div>
+    <div class="topbar-actions">
+      <a class="btn ghost" href="admin.html">Area Admin</a>
+      <button id="logoutBtn" class="btn danger hidden">Logout</button>
+    </div>
+  </header>
 
-  <h2>Catalogo prodotti</h2>
-  <div id="products"></div>
+  <main class="container">
+    <section id="authSection" class="grid-two">
+      <div class="panel glass">
+        <h2>Login</h2>
+        <p class="muted">Accedi per vedere crediti e catalogo.</p>
+        <input id="loginEmail" type="email" placeholder="Email">
+        <input id="loginPassword" type="password" placeholder="Password">
+        <button class="btn primary" onclick="login()">Accedi</button>
+        <p class="small-tip">Utente test: mario@mail.it / mario123</p>
+      </div>
 
-  <p id="message"></p>
+      <div class="panel glass">
+        <h2>Registrazione</h2>
+        <p class="muted">Crea un account utente.</p>
+        <input id="registerName" type="text" placeholder="Nome">
+        <input id="registerEmail" type="email" placeholder="Email">
+        <input id="registerPassword" type="password" placeholder="Password">
+        <button class="btn secondary" onclick="register()">Registrati</button>
+      </div>
+    </section>
 
-  <a href="admin.html">Vai alla vista Admin</a>
+    <section id="shopSection" class="hidden">
+      <div class="hero glass">
+        <div>
+          <p class="badge">Benvenuto</p>
+          <h2 id="welcomeText">Utente</h2>
+          <p class="muted">Esplora il catalogo e acquista usando i tuoi crediti.</p>
+        </div>
+        <div class="credits-box">
+          <span>Crediti disponibili</span>
+          <strong id="credits">0</strong>
+        </div>
+      </div>
+
+      <section>
+        <div class="section-head">
+          <h2>Catalogo prodotti</h2>
+          <button class="btn ghost" onclick="loadProducts()">Aggiorna</button>
+        </div>
+        <div id="products" class="cards-grid"></div>
+      </section>
+    </section>
+
+    <p id="message" class="message"></p>
+  </main>
 
   <script src="user.js"></script>
 </body>
