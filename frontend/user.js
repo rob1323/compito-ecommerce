@@ -1,4 +1,4 @@
-const BACKEND_URL = "http://localhost:3000";
+const BACKEND_URL = "https://compito-ecommerce.onrender.com";
 const USER_ID = 1;
 
 async function loadUser() {
