@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Commerce - Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Vista Admin</h1>
+
+  <h2>Aggiungi prodotto</h2>
+  <input id="name" placeholder="Nome prodotto">
+  <input id="price" type="number" placeholder="Prezzo">
+  <input id="stock" type="number" placeholder="Stock">
+  <button onclick="addProduct()">Aggiungi</button>
+
+  <h2>Modifica stock</h2>
+  <input id="productId" type="number" placeholder="ID prodotto">
+  <input id="newStock" type="number" placeholder="Nuovo stock">
+  <button onclick="updateStock()">Aggiorna stock</button>
+
+  <h2>Aggiungi crediti utente</h2>
+  <input id="userId" type="number" placeholder="ID utente">
+  <input id="bonusCredits" type="number" placeholder="Crediti bonus">
+  <button onclick="addCredits()">Assegna crediti</button>
+
+  <p id="adminMessage"></p>
+
+  <a href="index.html">Vai alla vista Utente</a>
+
+  <script src="admin.js"></script>
+</body>
+</html>
