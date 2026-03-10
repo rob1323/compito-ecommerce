@@ -54,5 +54,5 @@ L'IA è stata utilizzata per:
 - User: `mario@mail.it` / `mario123`
 
 ## Link
-- Backend: `https://prova-kgsx.onrender.com`
-- Frontend: `https://TUOUSERNAME.github.io/NOMEREPO/`
+- Backend: `https://compito-ecommerce.onrender.com`
+- Frontend: `https://rob1323.github.io/NOMEREPO/`
