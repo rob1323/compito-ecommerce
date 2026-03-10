@@ -17,7 +17,7 @@ const ALLOWED_ORIGINS = [
   "http://localhost:5500",
   "http://localhost:3000",
   "http://127.0.0.1:3000",
-  "https://rob1323.github.io"
+  "https://TUOUSERNAME.github.io"
 ];
 
 // sessioni in memoria
