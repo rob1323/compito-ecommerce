@@ -55,4 +55,4 @@ L'IA è stata utilizzata per:
 
 ## Link
 - Backend: `https://compito-ecommerce.onrender.com`
-- Frontend: `https://rob1323.github.io/NOMEREPO/`
+- Frontend: `https://github.com/rob1323/compito-ecommerce`
