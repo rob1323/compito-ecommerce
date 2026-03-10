@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 const USERS_FILE = "./users.json";
 const PRODUCTS_FILE = "./products.json";
 
-// Cambia questi con i tuoi link reali
+
 const ALLOWED_ORIGINS = [
   "http://127.0.0.1:5500",
   "http://localhost:5500",
